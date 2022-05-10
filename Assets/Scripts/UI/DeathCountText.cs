@@ -14,6 +14,16 @@ public class DeathCountText : MonoBehaviour
         deathCountText = this.GetComponent<TextMeshProUGUI>();
     }
 
+    public void LoadData(GameData data)
+    {
+        this.deathCount = data.deathCount;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.deathCount = this.deathCount;
+    }
+
     private void Start() 
     {
         // subscribe to events
